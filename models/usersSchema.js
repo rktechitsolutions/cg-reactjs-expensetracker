@@ -37,6 +37,11 @@ const usersSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    password: {
+        type: String,
+        required: true,
+        trim: true
+    },
     profile: {
         type: String,
         required: true
@@ -45,12 +50,12 @@ const usersSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    datecreated:Date,
-    dateUpdated:Date
+    datecreated: Date,
+    dateUpdated: Date
 });
 
 // model
 
-const users = new mongoose.model("users",usersSchema );
+const users = new mongoose.model("users", usersSchema);
 
 module.exports = users;
